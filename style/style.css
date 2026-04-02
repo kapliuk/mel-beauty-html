@@ -1,13 +1,13 @@
 @font-face {
   font-family: "KyivTypeSans";
-  src: url("/assets/fonts/KyivTypeSans-Regular3.woff2") format("woff2");
+  src: url("/fonts/KyivTypeSans-Regular3.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "KyivTypeSans";
-  src: url("/assets/fonts/KyivTypeSans-Bold3.woff2") format("woff2");
+  src: url("/fonts/KyivTypeSans-Bold3.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -81,11 +81,19 @@ img {
 }
 
 .btn {
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #040506;
   border: 2px solid #FFFFFF;
   border-radius: 50px;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 15px 30px;
+  transition: all 0.3s ease-in-out 0s;
+  font-size: 26px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.btn:hover {
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
 }
 
 /*header*/
@@ -94,7 +102,7 @@ img {
   top: 0px;
   left: 0px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
 .header__wrap {
@@ -187,11 +195,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 15px;
 }
 .services__item-name {
   text-transform: uppercase;
   text-align: center;
   margin: 0px 0px 10px;
+  text-decoration: none;
 }
 .services__item-img-wrap {
   width: 100%;
@@ -206,43 +216,49 @@ section {
 .services__item .btn {
   font-size: 18px;
   line-height: 20px;
+  padding: 10px 15px;
+  color: #FFFFFF;
+  background: transparent;
 }
 .services__item:hover .services__item-img {
   transform: scale(1.2);
 }
 
 /*gallery*/
+.gallery h2 {
+  margin: 0px;
+}
+.gallery__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .tabs {
   position: relative;
   display: flex;
-  gap: 30px;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5);
 }
-
 .tabs__item {
+  color: #FFFFFF;
+  padding: 0px 15px 10px;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
   cursor: pointer;
-  padding-bottom: 10px;
-  color: #aaa;
-  font-weight: 400;
   transition: 0.3s;
 }
-
-.tabs__item.active {
-  color: #fff;
-  font-weight: 700;
-}
-
 .tabs__indicator {
   position: absolute;
-  bottom: 0;
-  height: 2px;
-  background: white;
+  bottom: -4px;
+  height: 4px;
+  background: #FFFFFF;
   transition: 0.3s ease;
 }
-
 .tabs__content {
   display: none;
 }
-
 .tabs__content.active {
   display: block;
 }
@@ -252,14 +268,16 @@ section {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  padding: 80px 0px 0px;
 }
 .about__bg {
   position: absolute;
   top: 0px;
   left: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about .container {
   height: 100%;
@@ -267,25 +285,27 @@ section {
 .about__photo {
   position: absolute;
   left: 50%;
-  bottom: 0px;
+  transform: translateX(-50%);
+  bottom: -20px;
   max-width: 90%;
   width: auto;
-  max-height: 90%;
+  max-height: 100%;
   height: auto;
   z-index: 1;
 }
 .about__text {
-  width: 27%;
   position: absolute;
 }
 .about__text--first {
-  top: 5%;
-  left: 0px;
+  top: 1%;
+  left: 2%;
+  width: 33%;
   z-index: 0;
 }
 .about__text--second {
-  bottom: 5%;
-  right: 0px;
+  bottom: 1%;
+  right: 3%;
+  width: 40%;
   z-index: 2;
 }
 
@@ -330,29 +350,15 @@ section {
 /*footer*/
 .footer__top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 50px 0px;
   border-bottom: 2px solid #787878;
 }
-.footer__nav {
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
-  padding: 0px;
-}
-.footer__nav-item {
-  list-style-type: none;
-}
-.footer__nav-link {
-  text-decoration: none;
-}
-.footer__nav-link:hover {
-  color: #787878;
-}
 .footer__contact {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .footer__contact-item {
   font-size: 26px;
@@ -379,11 +385,25 @@ section {
 }
 .social__link {
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 47px;
+  height: 47px;
   border-radius: 50%;
   overflow: hidden;
-  background: url(/assets/media/icon_social.png) no-repeat;
+  background: url(/media/icons_social.png) no-repeat;
   background-position: 0px 0px;
-  background-size: 158px 56px;
+  background-size: 141px 47px;
+  margin: 0px 10px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.social__link--instagram {
+  background-position: 0px 0px;
+}
+.social__link--facebook {
+  background-position: -47px 0px;
+}
+.social__link--whatsapp {
+  background-position: -94px 0px;
+}
+.social__link:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */
