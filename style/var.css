@@ -1,14 +1,17 @@
+/*
 @font-face {
-  font-family: "KyivTypeSans";
-  src: url("/fonts/KyivTypeSans-Regular3.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'KyivTypeSans';
+	src: url('../fonts/KyivTypeSans-Regular3.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
+
 @font-face {
-  font-family: "KyivTypeSans";
-  src: url("/fonts/KyivTypeSans-Bold3.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}/*# sourceMappingURL=var.css.map */
+	font-family: 'KyivTypeSans';
+	src: url('../fonts/KyivTypeSans-Bold3.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+*/
