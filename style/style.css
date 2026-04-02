@@ -206,7 +206,7 @@ section {
 .services__item-img-wrap {
   width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 23px;
   margin: 0px 0px 10px;
   overflow: hidden;
 }
@@ -389,7 +389,7 @@ section {
   height: 47px;
   border-radius: 50%;
   overflow: hidden;
-  background: url(/media/icons_social.png) no-repeat;
+  background: url(./media/icons_social.png) no-repeat;
   background-position: 0px 0px;
   background-size: 141px 47px;
   margin: 0px 10px;
