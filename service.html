@@ -10,8 +10,8 @@
 	<meta name="robots" content="noindex, nofollow">
 	<link rel="canonical" href="https://mel-beauty.ch">
 	<link rel="icon" href="./favicon.ico">
-	<link rel="preload" href="./fonts/KyivTypeSans-Regular3.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/KyivTypeSans-Bold3.woff2" as="font" type="font/woff2" crossorigin>
+	<!-- <link rel="preload" href="./fonts/KyivTypeSans-Regular3.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="./fonts/KyivTypeSans-Bold3.woff2" as="font" type="font/woff2" crossorigin> -->
 	<link href="./style/reset.css" rel="stylesheet">
 	<link href="./style/aos.css" rel="stylesheet">
 	<link href="./style/swiper-bundle.min.css" rel="stylesheet">
@@ -22,67 +22,214 @@
 	<header id="header" class="header">
 		<div class="container">
 			<div class="header__wrap">
+				<a href="/" class="header__logo" style="display:none;">
+					<img src="./media/logo.png" alt="mel Beaurty">
+				</a>
 				<button class="nav-toggle">
 					<span class="nav-toggle__line"></span>
 				</button>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="#hero" class="nav__link">Головна</a></li>
-						<li class="nav__item"><a href="#services" class="nav__link">Послуги</a></li>
-						<li class="nav__item"><a href="#gallery" class="nav__link">Галерея</a></li>
-						<li class="nav__item"><a href="#about" class="nav__link">Про мене</a></li>
-						<li class="nav__item"><a href="#testimonials" class="nav__link">Контакти</a></li>
-					</ul>
-				</nav>
-				<div id="lang" class="lang">
-					<ul class="lang__list">
-						<li class="lang__item"><a href="#" class="lang__link">Eng</a></li>
-						<li class="lang__item"><a href="#" class="lang__link">Ukr</a></li>
-						<li class="lang__item"><a href="#" class="lang__link">Rus</a></li>
-					</ul>
+				<div class="header__nav-wrap">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item"><a href="index.html" class="nav__link">Головна</a></li>
+							<li class="nav__item"><a href="#services" class="nav__link">Послуги</a></li>
+							<li class="nav__item"><a href="#gallery" class="nav__link">Галерея</a></li>
+							<li class="nav__item"><a href="#about" class="nav__link">Про мене</a></li>
+							<li class="nav__item"><a href="#contacts" class="nav__link">Контакти</a></li>
+						</ul>
+					</nav>
+					<div id="lang" class="lang">
+						<ul class="lang__list">
+							<li class="lang__item"><a href="#" class="lang__link">Eng</a></li>
+							<li class="lang__item"><a href="#" class="lang__link">Ukr</a></li>
+							<li class="lang__item"><a href="#" class="lang__link">Rus</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<main id="main" class="main main--landing">
+	<main id="main" class="main main--service">
 		
-		<section id="hero" class="hero">
-			<img src="./media/img_hero.jpg" alt="" class="hero__img">
+		<section id="hero-service" class="hero hero--service">
 			<div class="container">
-				<h1 data-aos="fade-up"><img src="./media/logo.png" alt="" class="hero__logo"></h1>
-				<div class="hero__wrap">
-					<h1 class="hero__text" data-aos="fade-up">
-						Досконалість у кожній деталі.<br>
-						Перманентний макіяж,<br>
-						якому довіряють.
-					</h1>
+				<div class="hero__wrap hero__wrap--service">
+					<h1 data-aos="fade-up">Брови</h1>
+					<div class="hero__text hero__text--service" data-aos="fade-up">
+						<p>Экспертный подход к красоте,<br>
+						который подчёркивает<br>
+						твою индивидуальность.</p>
+					</div>
 					<button class="btn" data-aos="fade-up">Записатися</button>
 				</div>
 			</div>
+			<img src="./media/service-page/brovi_page.jpg" alt="" class="hero__img hero__img--service">
 		</section>
 
 		<section id="service" class="service">
-			<h2>Перманентный макияж бровей</h2>
-		</section>
+			<div class="container">
+				<div class="service-section">
+					<h2 data-aos="fade-up">Перманентный макияж бровей</h2>
+					<div class="service-section__list">
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">01</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Мягкая растушёвка (новинка)</h3>
+								<div class="service-section__item-text">Естественный эффект без чётких линий. Подходит для тех, кто хочет подчеркнуть форму и добавить выразительности без графичности. Мастера работают на профессиональных пигментах премиум-качества.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>350</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>2</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">02</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Пудровые брови</h3>
+								<div class="service-section__item-text">Мягкий эффект теней без чётких контуров. Идеально для создания аккуратной формы и естественной выразительности. Подходит для любого типа кожи.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>350</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>2</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">03</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Мягкая растушёвка</h3>
+								<div class="service-section__item-text">Естественный эффект без чётких линий. Подходит для тех, кто хочет подчеркнуть форму и добавить выразительности без графичности. Мастера работают на профессиональных пигментах премиум-качества.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>300</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>1:50</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">04</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Комбо: волоски + растушёвка</h3>
+								<div class="service-section__item-text">Идеальный баланс натуральности и выразительности. Техника сочетает прорисовку волосков и мягкую дымку для объёма и плотности. Подходит для коррекции формы и создания естественного, но более насыщенного  эффекта.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>400</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>2</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+
+						<span class="service-section__sep" data-aos="fade-up"></span>
+
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">05</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Мягкая растушёвка (новинка)</h3>
+								<div class="service-section__item-text">Естественный эффект без чётких линий. Подходит для тех, кто хочет подчеркнуть форму и добавить выразительности без графичности. Мастера работают на профессиональных пигментах премиум-качества.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>350</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>2</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">06</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Пудровые брови</h3>
+								<div class="service-section__item-text">Мягкий эффект теней без чётких контуров. Идеально для создания аккуратной формы и естественной выразительности. Подходит для любого типа кожи.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>350</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>2</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">07</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Мягкая растушёвка</h3>
+								<div class="service-section__item-text">Естественный эффект без чётких линий. Подходит для тех, кто хочет подчеркнуть форму и добавить выразительности без графичности. Мастера работают на профессиональных пигментах премиум-качества.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>300</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>1:50</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">08</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Комбо: волоски + растушёвка</h3>
+								<div class="service-section__item-text">Идеальный баланс натуральности и выразительности. Техника сочетает прорисовку волосков и мягкую дымку для объёма и плотности. Подходит для коррекции формы и создания естественного, но более насыщенного  эффекта.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>400</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>2</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+
+					</div><!--list-->
+				</div><!--service-section-->
+
+				<div class="service-section">
+					<h2 data-aos="fade-up">КОМБО-ПРОЦЕДУРЫ</h2>
+					<div class="service-section__list">
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">09</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Мягкая растушёвка</h3>
+								<div class="service-section__item-text">Естественный эффект без чётких линий. Подходит для тех, кто хочет подчеркнуть форму и добавить выразительности без графичности. Мастера работают на профессиональных пигментах премиум-качества.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>300</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>1:50</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+						<div class="service-section__item" data-aos="fade-up">
+							<div class="service-section__item-num">10</div>
+							<div class="service-section__item-wrap">
+								<h3 class="service-section__item-title">Комбо: волоски + растушёвка</h3>
+								<div class="service-section__item-text">Идеальный баланс натуральности и выразительности. Техника сочетает прорисовку волосков и мягкую дымку для объёма и плотности. Подходит для коррекции формы и создания естественного, но более насыщенного  эффекта.</div>
+								<div  class="service-section__item-detail">
+									<div class="service-section__item-price">Стоимость: <span>400</span> CHF</div>
+									<div class="service-section__item-price">Время: <span>2</span> часа</div>
+								</div>
+							</div><!--wrap-->
+						</div><!--item-->
+					</div>
+				</div>
+
+			</div><!--container-->
+		</section><!--service-->
 
 	</main>
 	
 	<footer id="footer" class="footer">
 		<div class="container">
-			<div class="footer__top">
-				<div class="footer__contact">
-					<a href="mailto:elenalapko_makeup@gmail.com" class="footer__contact-item footer__contact-item--mail">elenalapko_makeup@gmail.com</a>
-					<a href="mailto:elenalapko_makeup@gmail.com" class="footer__contact-item footer__contact-item--address">Banhofplatz 4, Zürich, Switzerland 8001</a>
-					<a href="tel:+41 76 45 18 411" class="footer__contact-item footer__contact-item--tel">+41 76 45 18 411</a>
+			<div class="footer__wrap">
+				<div class="footer__form">
+					<form method="" class="form">
+						<div class="form__item">
+							<input type="text" name="name" required class="form__input" placeholder="Имя">
+						</div>
+						<div class="form__item">
+							<input type="tel" name="phone" required class="form__input" placeholder="Телефон">
+						</div>
+						<div class="form__item form__item--submit">
+							<div class="form__info">Ваши данные никогда не будут переданы 3-м  лицам</div>
+							<input type="submit" name="submit" value="Замовити консультацію" class="form__submit btn">
+						</div>
+					</form>
 				</div>
-			</div><!--top-->
-			<div class="footer__bottom">
-				<ul class="social">
-					<li class="social__item"><a href="#" class="social__link social__link--instagram" rel="nofollow" title="Instagram"></a></li>
-					<li class="social__item"><a href="#" class="social__link social__link--facebook" rel="nofollow" title="Instagram"></a></li>
-					<li class="social__item"><a href="#" class="social__link social__link--whatsapp" rel="nofollow" title="Instagram"></a></li>
-				</ul>
+				<div id="contacts" class="footer__contacts">
+					<h2>Контакти</h2>
+					<div class="footer__contacts-list">
+						<a href="mailto:elenalapko_makeup@gmail.com" class="footer__contacts-item footer__contacts-item--mail">elenalapko_makeup@gmail.com</a>
+						<a href="mailto:elenalapko_makeup@gmail.com" class="footer__contacts-item footer__contacts-item--address">Banhofplatz 4, Zürich, Switzerland 8001</a>
+						<a href="tel:+41 76 45 18 411" class="footer__contacts-item footer__contacts-item--tel">+41 76 45 18 411</a>
+					</div>
+					<ul class="social">
+						<li class="social__item"><a href="#" class="social__link social__link--instagram" rel="nofollow" title="Instagram"></a></li>
+						<li class="social__item"><a href="#" class="social__link social__link--facebook" rel="nofollow" title="Instagram"></a></li>
+						<li class="social__item"><a href="#" class="social__link social__link--whatsapp" rel="nofollow" title="Instagram"></a></li>
+					</ul>
+				</div>
 			</div>
 		</div><!--container-->
 	</footer><!--footer-->

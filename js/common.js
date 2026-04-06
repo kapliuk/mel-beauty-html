@@ -50,7 +50,7 @@ let servicesSwiper = new Swiper(".services__slider", {
 			spaceBetween: 20,
 		},
 		1200:{
-			slidesPerView: 5,
+			slidesPerView: 4,
 			spaceBetween: 20,
 		}
 	}
