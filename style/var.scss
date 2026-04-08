@@ -16,8 +16,13 @@
 
 $font_primary: "KyivTypeSans", sans-serif;
 
-$bg_main: #1E1E1E;
+/*$font_primary: "Roboto", sans-serif;*/
+
+$bg_main: #040506;
 
 $color_main: #FFFFFF;
-$color_secondary: #1E1E1E;
-$color_asset: #787878;
+$color_secondary: #040506;
+$color_asset: #DAA520;
+$color_asset2: #787878;
+
+$transition: all 0.3s ease-in-out 0s;

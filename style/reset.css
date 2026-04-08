@@ -51,6 +51,9 @@ button,
 textarea,
 select {
   font: inherit;
+  &:focus{
+    outline: none;
+  }
 }
 
 /* Buttons */
@@ -64,6 +67,11 @@ button {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after{
+  display: none;
 }
 
 /* Remove animations for people who prefer reduced motion */

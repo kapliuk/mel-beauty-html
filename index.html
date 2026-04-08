@@ -10,8 +10,8 @@
 	<meta name="robots" content="noindex, nofollow">
 	<link rel="canonical" href="https://mel-beauty.ch">
 	<link rel="icon" href="./favicon.ico">
-	<link rel="preload" href="./fonts/KyivTypeSans-Regular3.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/KyivTypeSans-Bold3.woff2" as="font" type="font/woff2" crossorigin>
+	<!-- <link rel="preload" href="./fonts/KyivTypeSans-Regular3.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="./fonts/KyivTypeSans-Bold3.woff2" as="font" type="font/woff2" crossorigin> -->
 	<link href="./style/reset.css" rel="stylesheet">
 	<link href="./style/aos.css" rel="stylesheet">
 	<link href="./style/swiper-bundle.min.css" rel="stylesheet">
@@ -22,9 +22,9 @@
 	<header id="header" class="header">
 		<div class="container">
 			<div class="header__wrap">
-				<a href="/" class="header__logo" style="display:none;">
+				<span class="header__logo" style="display:none;">
 					<img src="./media/logo.png" alt="mel Beaurty">
-				</a>
+				</span>
 				<button class="nav-toggle">
 					<span class="nav-toggle__line"></span>
 				</button>
@@ -41,7 +41,7 @@
 					<div id="lang" class="lang">
 						<ul class="lang__list">
 							<li class="lang__item"><a href="#" class="lang__link">Eng</a></li>
-							<li class="lang__item"><a href="#" class="lang__link">Ukr</a></li>
+							<li class="lang__item"><a href="#" class="lang__link lang__link--active">Ukr</a></li>
 							<li class="lang__item"><a href="#" class="lang__link">Rus</a></li>
 						</ul>
 					</div>
@@ -53,7 +53,9 @@
 	<main id="main" class="main main--landing">
 		
 		<section id="hero" class="hero">
-			<img src="./media/img_hero.jpg" alt="" class="hero__img">
+			<div class="hero__bg">
+				<img src="./media/img_hero.jpg" alt="" class="hero__img">
+			</div>
 			<div class="container">
 				<div class="hero__wrap">
 					<h1 data-aos="fade-up"><img src="./media/logo.png" alt="" class="hero__logo"></h1>
@@ -62,7 +64,7 @@
 						Перманентний макіяж,<br>
 						якому довіряють.</p>
 					</div>
-					<button class="btn" data-aos="fade-up">Записатися</button>
+					<button class="btn">Записатися</button>
 				</div>
 			</div>
 		</section>
@@ -83,21 +85,21 @@
 							<div class="services__item swiper-slide">
 								<a href="service.html" class="services__item-name"><h3>Губи</h3></a>
 								<a href="service.html" class="services__item-img-wrap" rel="nofollow">
-									<img src="./media/services/gubi.jpg" class="services__item-img" alt="Брови">
+									<img src="./media/services/gubi.jpg" class="services__item-img" alt="Губи">
 								</a>
 								<a href="service.html" class="btn services__item-btn" rel="nofollow">Дізнатися більше</a>
 							</div><!--item-->
 							<div class="services__item swiper-slide">
-								<a href="service.html" class="services__item-name"><h3>Міжрічничка</h3></a>
+								<a href="service.html" class="services__item-name"><h3>Міжвійка</h3></a>
 								<a href="service.html" class="services__item-img-wrap" rel="nofollow">
-									<img src="./media/services/resnicy.jpg" class="services__item-img" alt="Брови">
+									<img src="./media/services/resnicy.jpg" class="services__item-img" alt="Міжвійка">
 								</a>
 								<a href="service.html" class="btn services__item-btn" rel="nofollow">Дізнатися більше</a>
 							</div><!--item-->
 							<div class="services__item swiper-slide">
 								<a href="service.html" class="services__item-name"><h3>Корекція</h3></a>
 								<a href="service.html" class="services__item-img-wrap" rel="nofollow">
-									<img src="./media/services/korrekciya.jpg" class="services__item-img" alt="Брови">
+									<img src="./media/services/korrekciya.jpg" class="services__item-img" alt="Корекція">
 								</a>
 								<a href="service.html" class="btn services__item-btn" rel="nofollow">Дізнатися більше</a>
 							</div><!--item-->
@@ -121,16 +123,39 @@
 					<div class="tabs" data-aos="fade-up">
 						<div class="tabs__item active" data-tab="1">Брови</div>
 						<div class="tabs__item" data-tab="2">Губи</div>
-						<div class="tabs__item" data-tab="3">Міжресничка</div>
+						<div class="tabs__item" data-tab="3">Міжвійка</div>
 						<div class="tabs__item" data-tab="4">Корекція</div>
 
 						<div class="tabs__indicator"></div>
 					</div>
 				</div><!--top-->
 				<div class="gallery__content" data-aos="fade-up">
-					<div class="tabs__content active" data-content="1">Контент брови</div>
+					<div class="tabs__content active" data-content="1">
+						<div class="gallery__slider swiper">
+							<div class="gallery__nav gallery__nav--prev swiper-button-prev"></div>
+							<div class="gallery__list swiper-wrapper">
+								<div class="gallery__item swiper-slide" data-caption="Натуральний ефект після першої процедури">
+									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+								</div><!--item-->
+								<div class="gallery__item swiper-slide" data-caption="Прикольний ефект після енної процедури">
+									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+								</div><!--item-->
+								<div class="gallery__item swiper-slide" data-caption="Ефект після чергової процедури">
+									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+								</div><!--item-->
+								<div class="gallery__item swiper-slide" data-caption="Чи помітите ви різницю">
+									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+								</div><!--item-->
+								<div class="gallery__item swiper-slide" data-caption="А чи читаєте текст?">
+									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+								</div><!--item-->
+							</div><!--list-->
+  							<div class="gallery__nav gallery__nav--next swiper-button-next"></div>
+						</div><!--slider-->
+						<div class="gallery__caption" id="caption"></div>
+					</div><!--tabs__content-->
 					<div class="tabs__content" data-content="2">Контент губи</div>
-					<div class="tabs__content" data-content="3">Контент міжресничка</div>
+					<div class="tabs__content" data-content="3">Контент міжвійка</div>
 					<div class="tabs__content" data-content="4">Контент корекція</div>
 				</div><!--content-->
 			</div><!--container-->
@@ -140,9 +165,12 @@
 		<section id="about" class="about">
 			<img src="./media/about/about_bg.jpg" class="about__bg" alt="Про мене">
 			<div class="container">
-				<img src="./media/about/about_olena.png" alt="Олена" class="about__photo">
-				<img src="./media/about/about_words_1.png" alt="Олена" class="about__text about__text--first rellax" data-rellax-speed="-1.5">
-				<img src="./media/about/about_words_2.png" alt="Олена" class="about__text about__text--second rellax" data-rellax-speed="0.5">
+				<h2 data-aos="fade-up">Про мене</h2>
+					<img src="./media/about/about_olena.png" alt="Олена" class="about__photo">
+					<img src="./media/about/about_words_1.png" alt="Олена" class="about__img about__img--first rellax" data-rellax-speed="-1.5">
+					<img src="./media/about/about_words_2.png" alt="Олена" class="about__img about__img--second rellax" data-rellax-speed="0.5">
+					<div class="about__text about__text--first" data-aos="fade-up">Мене звуть Олена, я майстер перманентного макіяжу із 12-річним досвідом. Працюю в Цюріху, використовую новітні технології та сертифіковані пігменти.</div>
+					<div class="about__text about__text--second" data-aos="fade-up">Моя мета — наголосити на природній красі кожної жінки.</div>
 			</div><!--container-->
 		</section><!--about-->
 
@@ -154,35 +182,35 @@
 						<div class="testimonials__list swiper-wrapper">
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 							<div class="testimonials__item swiper-slide">
 								<div class="testimonials__item-name">Вікторія Б.</div>
-								<div class="testimonials__item-text">Спасибо мастеру за аккуратность, внимательность и комфортную атмосферу. Теперь каждое утро просыпаюсь с красивыми бровками без  макияжа.</div>
+								<div class="testimonials__item-text">Дякуємо майстру за акуратність, уважність та комфортну атмосферу. Тепер щоранку прокидаюся з гарними брівками без макіяжу.</div>
 							</div><!--item-->
 						</div><!--list-->
 						<div class="testimonials__list-pagination"></div>
@@ -199,13 +227,13 @@
 				<div class="footer__form">
 					<form method="" class="form">
 						<div class="form__item">
-							<input type="text" name="name" required class="form__input" placeholder="Имя">
+							<input type="text" name="name" required class="form__input" placeholder="Им'я">
 						</div>
 						<div class="form__item">
 							<input type="tel" name="phone" required class="form__input" placeholder="Телефон">
 						</div>
 						<div class="form__item form__item--submit">
-							<div class="form__info">Ваши данные никогда не будут переданы 3-м  лицам</div>
+							<div class="form__info">Ваші дані ніколи не будуть передані 3-м особам</div>
 							<input type="submit" name="submit" value="Замовити консультацію" class="form__submit btn">
 						</div>
 					</form>

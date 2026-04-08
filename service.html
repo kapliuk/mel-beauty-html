@@ -22,7 +22,7 @@
 	<header id="header" class="header">
 		<div class="container">
 			<div class="header__wrap">
-				<a href="/" class="header__logo" style="display:none;">
+				<a href="index.html" class="header__logo">
 					<img src="./media/logo.png" alt="mel Beaurty">
 				</a>
 				<button class="nav-toggle">
@@ -41,7 +41,7 @@
 					<div id="lang" class="lang">
 						<ul class="lang__list">
 							<li class="lang__item"><a href="#" class="lang__link">Eng</a></li>
-							<li class="lang__item"><a href="#" class="lang__link">Ukr</a></li>
+							<li class="lang__item"><a href="#" class="lang__link lang__link--active">Ukr</a></li>
 							<li class="lang__item"><a href="#" class="lang__link">Rus</a></li>
 						</ul>
 					</div>
@@ -64,7 +64,9 @@
 					<button class="btn" data-aos="fade-up">Записатися</button>
 				</div>
 			</div>
-			<img src="./media/service-page/brovi_page.jpg" alt="" class="hero__img hero__img--service">
+			<div class="hero__bg hero__bg--service">
+				<img src="./media/service-page/brovi_page.jpg" alt="" class="hero__img">
+			</div>
 		</section>
 
 		<section id="service" class="service">
@@ -206,13 +208,13 @@
 				<div class="footer__form">
 					<form method="" class="form">
 						<div class="form__item">
-							<input type="text" name="name" required class="form__input" placeholder="Имя">
+							<input type="text" name="name" required class="form__input" placeholder="Им'я">
 						</div>
 						<div class="form__item">
 							<input type="tel" name="phone" required class="form__input" placeholder="Телефон">
 						</div>
 						<div class="form__item form__item--submit">
-							<div class="form__info">Ваши данные никогда не будут переданы 3-м  лицам</div>
+							<div class="form__info">Ваші дані ніколи не будуть передані 3-м особам</div>
 							<input type="submit" name="submit" value="Замовити консультацію" class="form__submit btn">
 						</div>
 					</form>
