@@ -103,6 +103,15 @@ img {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
 }
 
+dialog {
+  border: none;
+  border-radius: 25px;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
 /*header*/
 .header {
   position: fixed;
@@ -521,6 +530,7 @@ section {
 
 .form__item {
   position: relative;
+  width: 100%;
   margin: 0px 0px 50px;
 }
 .form__item--submit {
@@ -529,9 +539,12 @@ section {
   align-items: center;
   margin: 0px;
 }
+.form__item--popup {
+  justify-content: center;
+}
 .form__input {
   width: 100%;
-  height: 70px;
+  height: 66px;
   border-radius: 50px;
   border: 3px solid #FFFFFF;
   padding: 15px 40px 18px;
@@ -542,6 +555,10 @@ section {
 .form__input:hover, .form__input:focus {
   border-color: #DAA520;
 }
+.form__input--popup {
+  border-color: #040506;
+  color: #040506;
+}
 .form__info {
   font-size: 14px;
   line-height: 120%;
@@ -551,6 +568,38 @@ section {
   font-size: 20px;
   line-height: 120%;
   padding: 5px 10px;
+}
+.form__submit--popup {
+  border-color: #040506;
+}
+
+.popup-form {
+  position: relative;
+  max-width: 672px;
+  padding: 30px;
+}
+.popup-form__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup-form__title {
+  font-size: 40px;
+  line-height: 120%;
+  margin: 0px 0px 50px;
+}
+
+#closeForm {
+  font-size: 0px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: url(../media/icon_close.png) no-repeat;
+  background-size: 100%;
+  cursor: pointer;
 }
 
 .social {
@@ -638,4 +687,54 @@ section {
   border-radius: 100%;
   background: linear-gradient(to right, transparent, #ffffff, transparent);
   grid-column: 1/-1;
+}
+
+.form__select {
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+.form__select-wrap {
+  padding: 12px 40px 18px;
+}
+.form__select-current {
+  color: #787878;
+}
+.form__select-arrow {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  display: block;
+  width: 12px;
+  height: 6px;
+  background: url(../media/icon_arrow.png) no-repeat;
+  background-size: 100% 100%;
+}
+.form__select .options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 2px solid #040506;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 10;
+  font-size: 18px;
+  line-height: 120%;
+}
+.form__select.is-open .options {
+  display: block;
+  border-radius: 0px 0px 25px 25px;
+}
+.form__select.is-open .form__select-wrap {
+  border-radius: 25px 25px 0 0;
+}
+.form__select .option {
+  padding: 5px 40px;
+  cursor: pointer;
+}
+.form__select .option:hover {
+  background: #f0f0f0;
 }

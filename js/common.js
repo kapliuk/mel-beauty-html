@@ -155,3 +155,41 @@ let gallerySwiper = new Swiper('.gallery__slider', {
 		}
 	}
 });
+
+
+/*popup*/
+const modal = document.querySelector('#popupForm');
+const openBtn = document.querySelector('#openForm');
+const closeBtn = document.querySelector('#closeForm');
+
+openBtn.onclick = () => modal.showModal();
+closeBtn.onclick = () => modal.close();
+modal.onclick = (e) => {
+	if (e.target === modal) modal.close();
+};
+
+
+/*form popup*/
+const select = document.querySelector('.js-select');
+const trigger = select.querySelector('.form__select-wrap');
+const input = document.querySelector('#serviceInput');
+const currentText = select.querySelector('.form__select-current');
+
+trigger.addEventListener('click', () => {
+    select.classList.toggle('is-open');
+});
+
+select.querySelectorAll('.option').forEach(option => {
+    option.addEventListener('click', () => {
+        const val = option.dataset.value;
+        const text = option.textContent;
+        
+        input.value = val;
+        currentText.textContent = text;
+        select.classList.remove('is-open');
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (!select.contains(e.target)) select.classList.remove('is-open');
+});

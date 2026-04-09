@@ -58,21 +58,21 @@
 			</div>
 			<div class="container">
 				<div class="hero__wrap">
-					<h1 data-aos="fade-up"><img src="./media/logo.png" alt="" class="hero__logo"></h1>
-					<div class="hero__text" data-aos="fade-up">
+					<h1><img src="./media/logo.png" alt="" class="hero__logo"></h1>
+					<div class="hero__text">
 						<p>Досконалість у кожній деталі.<br>
 						Перманентний макіяж,<br>
 						якому довіряють.</p>
 					</div>
-					<button class="btn">Записатися</button>
+					<button class="btn" id="openForm">Записатися</button>
 				</div>
 			</div>
 		</section>
 
-		<section id="services" class="services bg">
+		<section id="services" class="services">
 			<div class="container">
-				<h2 data-aos="fade-up">Послуги</h2>
-				<div class="services__wrap" data-aos="fade-up">
+				<h2>Послуги</h2>
+				<div class="services__wrap">
 					<div class="services__slider swiper">
 						<div class="services__list swiper-wrapper">
 							<div class="services__item swiper-slide">
@@ -119,8 +119,8 @@
 		<section id="gallery" class="gallery">
 			<div class="container">
 				<div class="gallery__top">
-					<h2 data-aos="fade-up">Галерея</h2>
-					<div class="tabs" data-aos="fade-up">
+					<h2>Галерея</h2>
+					<div class="tabs">
 						<div class="tabs__item active" data-tab="1">Брови</div>
 						<div class="tabs__item" data-tab="2">Губи</div>
 						<div class="tabs__item" data-tab="3">Міжвійка</div>
@@ -129,7 +129,7 @@
 						<div class="tabs__indicator"></div>
 					</div>
 				</div><!--top-->
-				<div class="gallery__content" data-aos="fade-up">
+				<div class="gallery__content">
 					<div class="tabs__content active" data-content="1">
 						<div class="gallery__slider swiper">
 							<div class="gallery__nav gallery__nav--prev swiper-button-prev"></div>
@@ -165,19 +165,19 @@
 		<section id="about" class="about">
 			<img src="./media/about/about_bg.jpg" class="about__bg" alt="Про мене">
 			<div class="container">
-				<h2 data-aos="fade-up">Про мене</h2>
+				<h2>Про мене</h2>
 					<img src="./media/about/about_olena.png" alt="Олена" class="about__photo">
 					<img src="./media/about/about_words_1.png" alt="Олена" class="about__img about__img--first rellax" data-rellax-speed="-1.5">
 					<img src="./media/about/about_words_2.png" alt="Олена" class="about__img about__img--second rellax" data-rellax-speed="0.5">
-					<div class="about__text about__text--first" data-aos="fade-up">Мене звуть Олена, я майстер перманентного макіяжу із 12-річним досвідом. Працюю в Цюріху, використовую новітні технології та сертифіковані пігменти.</div>
-					<div class="about__text about__text--second" data-aos="fade-up">Моя мета — наголосити на природній красі кожної жінки.</div>
+					<div class="about__text about__text--first">Мене звуть Олена, я майстер перманентного макіяжу із 12-річним досвідом. Працюю в Цюріху, використовую новітні технології та сертифіковані пігменти.</div>
+					<div class="about__text about__text--second">Моя мета — наголосити на природній красі кожної жінки.</div>
 			</div><!--container-->
 		</section><!--about-->
 
 		<section id="testimonials" class="testimonials">
 			<div class="container">
-				<h2 data-aos="fade-up">Відгуки клієнтів</h2>
-				<div class="testimonials__wrap" data-aos="fade-up">
+				<h2>Відгуки клієнтів</h2>
+				<div class="testimonials__wrap">
 					<div class="testimonials__slider swiper">
 						<div class="testimonials__list swiper-wrapper">
 							<div class="testimonials__item swiper-slide">
@@ -255,16 +255,56 @@
 		</div><!--container-->
 	</footer><!--footer-->
 
+	<dialog id="popupForm">
+		<div class="popup-form">
+			<div id="closeForm"></div>
+			<div class="popup-form__wrap">
+				<div class="popup-form__title">Записатися на послугу</div>
+				<form method="" class="form form--popup">
+					<div class="form__item">
+						<input type="text" name="name" required class="form__input form__input--popup" placeholder="Ім'я">
+					</div>
+					<div class="form__item">
+						<input type="tel" name="phone" required class="form__input form__input--popup" placeholder="Телефон">
+					</div>
+					<div class="form__item">
+						<div class="form__select js-select">
+							<div class="form__input form__select-wrap form__input--popup">
+								<span class="form__select-current">Оберіть послугу</span>
+								<div class="form__select-arrow"></div>
+							</div>
+							<div class="options">
+								<div class="option" data-value="brows">Брови</div>
+								<div class="option" data-value="lips">Губи</div>
+								<div class="option" data-value="lashes">Міжвійка</div>
+								<div class="option" data-value="lashes">Корекція</div>
+							</div>
+							<input type="hidden" name="service" id="serviceInput">
+						</div>
+					</div>
+					<div class="form__item form__item--submit form__item--popup">
+						<input type="submit" name="submit" value="Записатися" class="form__submit form__submit--popup btn">
+					</div>
+				</form>
+			</div>
+		</div>
+	</dialog>
+
 	<script src="./js/aos.js"></script>
 	<script src="./js/swiper-bundle.min.js"></script>
 	<script src="./js/rellax.min.js"></script>
 	<script src="./js/common.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
 
 	<script>
 		AOS.init({
 			easing: 'ease-in-out-sine'
 		});
 		var rellax = new Rellax('.rellax');
+
+		//Fancybox.bind("[data-fancybox]", {});
 	</script>
 
 </body>
