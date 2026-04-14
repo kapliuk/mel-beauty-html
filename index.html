@@ -135,19 +135,29 @@
 							<div class="gallery__nav gallery__nav--prev swiper-button-prev"></div>
 							<div class="gallery__list swiper-wrapper">
 								<div class="gallery__item swiper-slide" data-caption="Натуральний ефект після першої процедури">
-									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									<a href="./media/gallery/gallery_img_demo.jpg" data-fancybox="gallery">
+										<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									</a>
 								</div><!--item-->
 								<div class="gallery__item swiper-slide" data-caption="Прикольний ефект після енної процедури">
-									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									<a href="./media/gallery/gallery_img_demo.jpg" data-fancybox="gallery">
+										<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									</a>
 								</div><!--item-->
 								<div class="gallery__item swiper-slide" data-caption="Ефект після чергової процедури">
-									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									<a href="./media/gallery/gallery_img_demo.jpg" data-fancybox="gallery">
+										<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									</a>
 								</div><!--item-->
 								<div class="gallery__item swiper-slide" data-caption="Чи помітите ви різницю">
-									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									<a href="./media/gallery/gallery_img_demo.jpg" data-fancybox="gallery">
+										<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									</a>
 								</div><!--item-->
 								<div class="gallery__item swiper-slide" data-caption="А чи читаєте текст?">
-									<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									<a href="./media/gallery/gallery_img_demo.jpg" data-fancybox="gallery">
+										<img src="./media/gallery/gallery_img_demo.jpg" alt="Натуральний ефект після першої процедури" class="gallery__img">
+									</a>
 								</div><!--item-->
 							</div><!--list-->
   							<div class="gallery__nav gallery__nav--next swiper-button-next"></div>
@@ -227,14 +237,14 @@
 				<div class="footer__form">
 					<form method="" class="form">
 						<div class="form__item">
-							<input type="text" name="name" required class="form__input" placeholder="Им'я">
+							<input type="text" name="name" required class="form__input footer__form-input" placeholder="Им'я">
 						</div>
 						<div class="form__item">
-							<input type="tel" name="phone" required class="form__input" placeholder="Телефон">
+							<input type="tel" name="phone" required class="form__input footer__form-input" placeholder="Телефон">
 						</div>
 						<div class="form__item form__item--submit">
 							<div class="form__info">Ваші дані ніколи не будуть передані 3-м особам</div>
-							<input type="submit" name="submit" value="Замовити консультацію" class="form__submit btn">
+							<input type="submit" name="submit" value="Замовити консультацію" class="form__submit footer__form-submit btn">
 						</div>
 					</form>
 				</div>
@@ -260,16 +270,16 @@
 			<div id="closeForm"></div>
 			<div class="popup-form__wrap">
 				<div class="popup-form__title">Записатися на послугу</div>
-				<form method="" class="form form--popup">
+				<form method="" class="form">
 					<div class="form__item">
-						<input type="text" name="name" required class="form__input form__input--popup" placeholder="Ім'я">
+						<input type="text" name="name" required class="form__input form__input--dark" placeholder="Ім'я">
 					</div>
 					<div class="form__item">
-						<input type="tel" name="phone" required class="form__input form__input--popup" placeholder="Телефон">
+						<input type="tel" name="phone" required class="form__input form__input--dark" placeholder="Телефон">
 					</div>
 					<div class="form__item">
 						<div class="form__select js-select">
-							<div class="form__input form__select-wrap form__input--popup">
+							<div class="form__input form__input--dark form__select-wrap">
 								<span class="form__select-current">Оберіть послугу</span>
 								<div class="form__select-arrow"></div>
 							</div>
@@ -282,8 +292,8 @@
 							<input type="hidden" name="service" id="serviceInput">
 						</div>
 					</div>
-					<div class="form__item form__item--submit form__item--popup">
-						<input type="submit" name="submit" value="Записатися" class="form__submit form__submit--popup btn">
+					<div class="form__item form__item--popup form__item--submit">
+						<input type="submit" name="submit" value="Записатися" class="form__submit btn btn--dark">
 					</div>
 				</form>
 			</div>
@@ -304,7 +314,7 @@
 		});
 		var rellax = new Rellax('.rellax');
 
-		//Fancybox.bind("[data-fancybox]", {});
+		Fancybox.bind("[data-fancybox]", {});
 	</script>
 
 </body>
